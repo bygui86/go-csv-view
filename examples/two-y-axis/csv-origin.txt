@@ -1,0 +1,6 @@
+
+ohlcv
+    BINANCE_ohlcv_spot_60_BTC-USDT_2022-01-01
+
+trades
+    BINANCE_trades_spot_60_BTC-USDT_2022-01-01_00

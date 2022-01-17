@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/bygui86/go-csv-view/official/examples"
+	"github.com/bygui86/go-csv-view/examples/official/examples"
 )
 
 func logRequest(handler http.Handler) http.Handler {

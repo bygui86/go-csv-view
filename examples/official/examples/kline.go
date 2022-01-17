@@ -307,7 +307,6 @@ func (KlineExamples) Examples() {
 	f, err := os.Create("examples/html/kline.html")
 	if err != nil {
 		panic(err)
-
 	}
 	page.Render(io.MultiWriter(f))
 }

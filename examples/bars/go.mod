@@ -1,4 +1,4 @@
-module github.com/bygui86/go-csv-view/bars
+module github.com/bygui86/go-csv-view/examples/bars
 
 go 1.17
 

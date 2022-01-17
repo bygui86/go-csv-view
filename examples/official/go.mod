@@ -1,4 +1,4 @@
-module github.com/bygui86/go-csv-view/official
+module github.com/bygui86/go-csv-view/examples/official
 
 go 1.17
 

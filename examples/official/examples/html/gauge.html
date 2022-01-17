@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Awesome go-echarts</title>
+    <script src="https://go-echarts.github.io/go-echarts-assets/assets/echarts.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <style> .container {display: flex;justify-content: center;align-items: center;} .item {margin: auto;} </style> 
+<div class="container">
+    <div class="item" id="HJLWJUekRDfl" style="width:900px;height:500px;"></div>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    let goecharts_HJLWJUekRDfl = echarts.init(document.getElementById('HJLWJUekRDfl'), "white");
+    let option_HJLWJUekRDfl = {"color":["#5470c6","#91cc75","#fac858","#ee6666","#73c0de","#3ba272","#fc8452","#9a60b4","#ea7ccc"],"legend":{"show":false,"type":""},"series":[{"name":"ProjectA","type":"gauge","showSymbol":false,"waveAnimation":false,"renderLabelForZeroData":false,"selectedMode":false,"animation":false,"data":[{"name":"Work progress","value":34}]}],"title":{"text":"basic Gauge example"},"tooltip":{"show":false}}
+;
+    goecharts_HJLWJUekRDfl.setOption(option_HJLWJUekRDfl);
+</script>
+ 
+<div class="container">
+    <div class="item" id="FBnXLVMRzOsT" style="width:900px;height:500px;"></div>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    let goecharts_FBnXLVMRzOsT = echarts.init(document.getElementById('FBnXLVMRzOsT'), "white");
+    let option_FBnXLVMRzOsT = {"color":["#5470c6","#91cc75","#fac858","#ee6666","#73c0de","#3ba272","#fc8452","#9a60b4","#ea7ccc"],"legend":{"show":false,"type":""},"series":[{"name":"ProjectB","type":"gauge","showSymbol":false,"waveAnimation":false,"renderLabelForZeroData":false,"selectedMode":false,"animation":false,"data":[{"name":"Work progress","value":22}]}],"title":{"text":"javascript timer"},"tooltip":{"show":false}}
+;
+    goecharts_FBnXLVMRzOsT.setOption(option_FBnXLVMRzOsT);
+    setInterval(function () {option_FBnXLVMRzOsT.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;goecharts_FBnXLVMRzOsT.setOption(option_FBnXLVMRzOsT, true);}, 2000);
+</script>
+
+
+
+
+</body>
+</html>
