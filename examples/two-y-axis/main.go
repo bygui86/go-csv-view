@@ -130,7 +130,7 @@ func prepareTradesData(records [][]string) ([]string, []opts.LineData) {
 		if err != nil {
 			continue
 		}
-		x = append(x, record[1])
+		x = append(x, record[0])
 		y = append(y, opts.LineData{Value: sizeVal, YAxisIndex: 1})
 	}
 

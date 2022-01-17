@@ -31,10 +31,15 @@ See in `examples` folder [here](examples/)
 
 - [repo](https://github.com/go-echarts/go-echarts)
 - [examples](https://github.com/go-echarts/examples)
-
-### go-tachart
-
-- [repo](https://github.com/iamjinlei/go-tachart)
+- 2 y-axis example
+  - [issue](https://github.com/go-echarts/go-echarts/issues/204)
+  - [real example](https://github.com/NexonSU/telegram-go-chatbot/blob/db2c45b3f9e5cfba9e1f8974cb61d16c5bca4372/app/stats/activity.go#L46)
+  - [(apache echarts) multiple-y-axis example](https://echarts.apache.org/examples/en/editor.html?c=multiple-y-axis)
+- full kline example
+  - [issue](https://github.com/go-echarts/go-echarts/issues/169)
+  - [alaingilbert enhancement](https://github.com/alaingilbert/go-echarts/commit/c80db93de77a03040462ede3a5c60bb0954e05ba)
+  - [go-tachart](https://github.com/iamjinlei/go-tachart)
+  - [(apache echarts) candlestick-brush example](https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush)
 
 ### initial inspiration
 
