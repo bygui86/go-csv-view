@@ -1,4 +1,4 @@
-module github.com/bygui86/go-csv-view/examples/web-server
+module github.com/bygui86/go-csv-view/examples/kline
 
 go 1.17
 

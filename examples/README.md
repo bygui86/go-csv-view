@@ -1,10 +1,6 @@
 
 # Golang CSV Viewer - go-echarts examples
 
-## TODO list
-
-- full kline chart with iamjinlei/go-tachart
-
 ## Not yet supported by go-echarts (or not well documented)
 
 - full kline chart like https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush
@@ -32,18 +28,18 @@
 
 ---
 
-## `official`
+## `go-echarts officials`
 
 There are variety of charts, such as `bar`, `line`, `pie`, `radaer`, etc.
 
 ```bash
-cd official && go run .
+cd go-echarts-official && go run .
 
 # in another terminal window
 open http://localhost:8089
 ```
 
-## `web-server`
+## `go-echarts web-server`
 
 ```bash
 cd web-server && go run main.go
@@ -60,20 +56,20 @@ cd line && go run main.go
 open ohlcv.html
 ```
 
-## `two Y-Axis`
-
-```bash
-cd two-y-axis && go run main.go
-
-open two-y-axis.html
-```
-
 ## `bar`
 
 ```bash
 cd bar && go run main.go
 
 open games.html
+```
+
+## `two Y-Axis`
+
+```bash
+cd two-y-axis && go run main.go
+
+open two-y-axis.html
 ```
 
 ## `line-bar`
@@ -88,6 +84,22 @@ open trades.html
 
 ```bash
 cd kline && go run main.go
+
+open ohlcv.html
+```
+
+## `kline` using go-tachart
+
+```bash
+cd go-tachart-official && go run main.go
+
+open kline.html
+```
+
+## `kline` using unofficial modified go-echarts
+
+```bash
+cd kline-custom && go run main.go
 
 open ohlcv.html
 ```

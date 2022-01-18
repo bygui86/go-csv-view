@@ -33,8 +33,10 @@ func main() {
 
 	lineOverlapChart := plotOverlapChart(xAxe, ohlcYaxe, volumeLineChart)
 	barsOverlapChart := plotOverlapChart(xAxe, ohlcYaxe, volumeBarsChart)
+	//fullChart := plotFullChart(xAxe, ohlcYaxe, volLineYaxe)
 
-	pageErr := createHtml(htmlFilePath, barsOverlapChart, lineOverlapChart, simpleChart, volumeLineChart, volumeBarsChart)
+	pageErr := createHtml(htmlFilePath, barsOverlapChart, lineOverlapChart, simpleChart)
+	//pageErr := createHtml(htmlFilePath, barsOverlapChart, lineOverlapChart, simpleChart, volumeLineChart, volumeBarsChart)
 	if pageErr != nil {
 		log.Fatal(pageErr)
 	}
