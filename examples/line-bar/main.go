@@ -92,7 +92,8 @@ func plotBar(xAxe []string, yAxe []opts.BarData, overlapChart charts.Overlaper) 
 		//GridIndex: 1, // y index 1 // not required
 	})
 
-	bar.SetXAxis(xAxe).AddSeries("size", yAxe)
+	//bar.SetXAxis(xAxe).AddSeries("size", yAxe)
+	bar.SetXAxis(xAxe).AddSeries("size", yAxe, charts.WithRippleEffectOpts(opts.RippleEffect{Period: 5}))
 
 	if overlapChart != nil {
 		bar.Overlap(overlapChart)
@@ -144,7 +145,11 @@ func plotLine(xAxe []string, yAxe []opts.LineData) *charts.Line {
 		//GridIndex: 1, // y index 1 // not required
 	})
 
-	line.SetXAxis(xAxe).AddSeries("price", yAxe, charts.WithLineChartOpts(opts.LineChart{Smooth: true, YAxisIndex: 1}))
+	line.SetXAxis(xAxe).AddSeries("price", yAxe,
+		charts.WithLineChartOpts(opts.LineChart{Smooth: true, YAxisIndex: 1}),
+		//charts.WithRippleEffectOpts(opts.RippleEffect{Period: 5, BrushType: "stroke"}),
+		charts.WithRippleEffectOpts(opts.RippleEffect{Period: 5}),
+	)
 
 	return line
 }

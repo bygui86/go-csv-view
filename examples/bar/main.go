@@ -87,10 +87,16 @@ func mapData(gameNames []string, sales []float64) DataList {
 
 func createChart(sortedData DataList) error {
 	bar := charts.NewBar()
-	bar.SetGlobalOptions(charts.WithTitleOpts(opts.Title{
-		Title:    "PC Games Sales",
-		Subtitle: "Best selling PC games",
-	}))
+	bar.SetGlobalOptions(
+		charts.WithTitleOpts(opts.Title{
+			Title:    "PC Games Sales",
+			Subtitle: "Best selling PC games",
+		}),
+		charts.WithInitializationOpts(opts.Initialization{
+			PageTitle: "go-echarts bar example",
+			Theme:     "dark",
+		}),
+	)
 	bar.SetXAxis([]string{
 		sortedData[0].Key[:4], sortedData[1].Key[:4], sortedData[2].Key[:4], sortedData[3].Key[:4],
 		sortedData[4].Key[:4], sortedData[5].Key[:4], sortedData[6].Key[:4],

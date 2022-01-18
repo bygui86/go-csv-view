@@ -1,25 +1,34 @@
 
-# Golang CSV Viewer - Examples
+# Golang CSV Viewer - go-echarts examples
 
 ## TODO list
 
-- iamjinlei/go-tachart
+- full kline chart with iamjinlei/go-tachart
+
+## Not yet supported by go-echarts (or not well documented)
+
 - full kline chart like https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush
+
 - left/right tooltip like https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush
-- area of evidence like https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush
-- min, max, avg of window like https://echarts.apache.org/examples/en/editor.html?c=candlestick-sh
+
+- markarea (zone of evidence) like
+  - https://echarts.apache.org/examples/en/editor.html?c=line-sections
+  - https://echarts.apache.org/examples/en/editor.html?c=area-rainfall
+  - https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush
+
+- inverse y-axis like 
+  - https://echarts.apache.org/examples/en/editor.html?c=grid-multiple
+  - https://echarts.apache.org/examples/en/editor.html?c=area-rainfall
+
+- multiple charts, single datazoom, single panel like https://echarts.apache.org/examples/en/editor.html?c=grid-multiple
+
+- multiple x-axis like https://echarts.apache.org/examples/en/editor.html?c=multiple-x-axis
+
+- linear gradient like https://echarts.apache.org/examples/en/editor.html?c=area-stack-gradient
+
 - animations
   - draw line animation like https://echarts.apache.org/examples/en/editor.html?c=candlestick-sh
   - bar animation delay like https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay
-- changing color of x-axis zone like https://echarts.apache.org/examples/en/editor.html?c=candlestick-sh
-- custom colors like https://echarts.apache.org/examples/en/editor.html?c=bubble-gradient
-- inverted values like
-  - https://echarts.apache.org/examples/en/editor.html?c=area-rainfall
-  - https://echarts.apache.org/examples/en/editor.html?c=grid-multiple
-- put peaks in evidence like https://echarts.apache.org/examples/en/editor.html?c=line-sections
-- multiple x-axis like https://echarts.apache.org/examples/en/editor.html?c=multiple-x-axis
-- thresholds like https://echarts.apache.org/examples/en/editor.html?c=line-aqi
-- filled lines like https://echarts.apache.org/examples/en/editor.html?c=area-stack-gradient
 
 ---
 
