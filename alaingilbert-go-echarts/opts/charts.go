@@ -464,6 +464,12 @@ type ScatterChart struct {
 
 	// Index of x axis to combine with, which is useful for multiple y axes in one chart.
 	YAxisIndex int
+
+	// SymbolSize
+	SymbolSize float32 `json:"symbolSize,omitempty"`
+
+	// Symbol 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none'
+	Symbol string `json:"symbol,omitempty"`
 }
 
 // ScatterData

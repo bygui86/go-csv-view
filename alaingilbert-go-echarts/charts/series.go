@@ -47,6 +47,7 @@ type SingleSeries struct {
 	Radius   interface{} `json:"radius,omitempty"`
 
 	// Scatter
+	Symbol     string  `json:"symbol,omitempty"`
 	SymbolSize float32 `json:"symbolSize,omitempty"`
 
 	// Tree
@@ -226,6 +227,8 @@ func WithScatterChartOpts(opt opts.ScatterChart) SeriesOpts {
 	return func(s *SingleSeries) {
 		s.XAxisIndex = opt.XAxisIndex
 		s.YAxisIndex = opt.YAxisIndex
+		s.SymbolSize = opt.SymbolSize
+		s.Symbol = opt.Symbol
 	}
 }
 
