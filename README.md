@@ -15,7 +15,7 @@ Visualize CSV data in Golang
 
 ## Examples
 
-See in `examples` folder [here](examples/)
+See [examples](examples) folder
 
 ---
 
@@ -41,6 +41,10 @@ See in `examples` folder [here](examples/)
   - [go-tachart](https://github.com/iamjinlei/go-tachart)
   - [(apache echarts) candlestick-brush example](https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush)
 
+### statsview
+
+- [repo](https://github.com/go-echarts/statsview)
+
 ### initial inspiration
 
 - [article](https://betterprogramming.pub/data-visualization-in-go-e3135d93f8a8)
@@ -48,4 +52,4 @@ See in `examples` folder [here](examples/)
 
 ### other articles
 
-- https://blog.logrocket.com/visualizing-data-go-echarts/
+- [Visualizing data with go-echarts](https://blog.logrocket.com/visualizing-data-go-echarts/)

@@ -103,3 +103,12 @@ cd kline-custom && go run main.go
 
 open ohlcv.html
 ```
+
+## `statsview`
+
+```bash
+cd statsview && go run main.go
+
+# in another terminal window
+open http://localhost:8090/debug/statsview
+```
