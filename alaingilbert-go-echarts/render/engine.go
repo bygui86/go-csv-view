@@ -70,10 +70,10 @@ func (r *chartRender) Render(w io.Writer) error {
 	}
 
 	contents := []string{tpls.HeaderTpl, tpls.BaseTpl, tpls.ChartTpl}
-	tpl := MustTemplate(ModChart, contents)
+	tpl := MustTemplate("base", contents)
 
 	var buf bytes.Buffer
-	if err := tpl.ExecuteTemplate(&buf, ModChart, r.c); err != nil {
+	if err := tpl.ExecuteTemplate(&buf, "base", r.c); err != nil {
 		return err
 	}
 

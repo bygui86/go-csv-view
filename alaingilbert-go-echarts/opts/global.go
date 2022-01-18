@@ -608,6 +608,9 @@ type XAxis struct {
 
 	// AxisTick
 	AxisTick *AxisTick `json:"axisTick,omitempty"`
+
+	// AxisLine
+	AxisLine *AxisLine `json:"axisLine,omitempty"`
 }
 
 // YAxis is the option set for Y axis.
@@ -1263,10 +1266,16 @@ type ZAxis3D struct {
 // Grid
 type Grid struct {
 	// Height
-	Height float32 `json:"height,omitempty"`
+	Height string `json:"height,omitempty"`
 
 	// Bottom
-	Bottom float32 `json:"bottom,omitempty"`
+	Bottom string `json:"bottom,omitempty"`
+
+	// Left
+	Left string `json:"left"`
+
+	// Right
+	Right string `json:"right"`
 }
 
 // Grid3D contains options for the 3D coordinate.
