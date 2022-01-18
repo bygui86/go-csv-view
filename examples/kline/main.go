@@ -226,6 +226,7 @@ func plotSimpleChart(xAxe []string, yAxe []opts.KlineData) *charts.Kline {
 				Type: "cross",
 				Snap: true,
 			},
+			//AxisPointer: &opts.AxisPointer{Type: "line"},
 		}),
 		// AXIS
 		charts.WithXAxisOpts(opts.XAxis{
