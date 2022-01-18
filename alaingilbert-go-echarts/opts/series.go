@@ -73,6 +73,14 @@ type Emphasis struct {
 	ItemStyle *ItemStyle `json:"itemStyle,omitempty"`
 }
 
+// Encode
+type Encode struct {
+	// X
+	X interface{} `json:"x"`
+	// Y
+	Y interface{} `json:"y"`
+}
+
 // ItemStyle
 type ItemStyle struct {
 	// Color of chart

@@ -82,6 +82,7 @@ type SingleSeries struct {
 	Data interface{} `json:"data"`
 
 	// series options
+	*opts.Encode       `json:"encode,omitempty"`
 	*opts.ItemStyle    `json:"itemStyle,omitempty"`
 	*opts.Label        `json:"label,omitempty"`
 	*opts.LabelLine    `json:"labelLine,omitempty"`
@@ -114,6 +115,13 @@ func WithEmphasisOpts(opt opts.Emphasis) SeriesOpts {
 func WithAreaStyleOpts(opt opts.AreaStyle) SeriesOpts {
 	return func(s *SingleSeries) {
 		s.AreaStyle = &opt
+	}
+}
+
+// WithEncodeOpts
+func WithEncodeOpts(opt opts.Encode) SeriesOpts {
+	return func(s *SingleSeries) {
+		s.Encode = &opt
 	}
 }
 

@@ -475,7 +475,7 @@ type ToolBoxFeatureRestore struct {
 // https://echarts.apache.org/en/option.html#xAxis.axisLabel
 type AxisLabel struct {
 	// Set this to false to prevent the axis label from appearing.
-	Show bool `json:"show,omitempty"`
+	Show bool `json:"show"`
 
 	// Interval of Axis label, which is available in category axis.
 	// It uses a strategy that labels do not overlap by default.
@@ -605,6 +605,9 @@ type XAxis struct {
 
 	// Settings related to axis label.
 	AxisLabel *AxisLabel `json:"axisLabel,omitempty"`
+
+	// AxisTick
+	AxisTick *AxisTick `json:"axisTick,omitempty"`
 }
 
 // YAxis is the option set for Y axis.
@@ -665,6 +668,12 @@ type YAxis struct {
 
 	// Settings related to axis label.
 	AxisLabel *AxisLabel `json:"axisLabel,omitempty"`
+
+	// AxisTick
+	AxisTick *AxisTick `json:"axisTick,omitempty"`
+
+	// AxisLine
+	AxisLine *AxisLine `json:"axisLine,omitempty"`
 }
 
 // TextStyle is the option set for a text style component.
@@ -701,6 +710,18 @@ type SplitArea struct {
 	AreaStyle *AreaStyle `json:"areaStyle,omitempty"`
 }
 
+// AxisLine
+type AxisLine struct {
+	// Set this to true to show the axisLine.
+	Show bool `json:"show"`
+}
+
+// AxisTick
+type AxisTick struct {
+	// Set this to true to show the axisTick.
+	Show bool `json:"show"`
+}
+
 // SplitLine is the option set for a split line.
 type SplitLine struct {
 	// Set this to true to show the splitLine.
@@ -708,6 +729,15 @@ type SplitLine struct {
 
 	// Split line style.
 	LineStyle *LineStyle `json:"lineStyle,omitempty"`
+}
+
+// Piece
+type Piece struct {
+	// Value
+	Value int `json:"value"`
+
+	//Color
+	Color string `json:"color"`
 }
 
 // VisualMap is a type of component for visual encoding, which maps the data to visual channels.
@@ -718,7 +748,7 @@ type VisualMap struct {
 	Type string `json:"type,omitempty" default:"continuous"`
 
 	// Whether show handles, which can be dragged to adjust "selected range".
-	Calculable bool `json:"calculable"`
+	Calculable bool `json:"calculable,omitempty"`
 
 	// Specify the min dataValue for the visualMap component.
 	// [visualMap.min, visualMax.max] make up the domain of visual mapping.
@@ -736,6 +766,18 @@ type VisualMap struct {
 
 	// Define visual channels that will mapped from dataValues that are in selected range.
 	InRange *VisualMapInRange `json:"inRange,omitempty"`
+
+	// Dimension
+	Dimension int `json:"dimension"`
+
+	// SeriesIndex
+	SeriesIndex int `json:"seriesIndex"`
+
+	// Show
+	Show bool `json:"show"`
+
+	// Pieces
+	Pieces []Piece `json:"pieces"`
 }
 
 // VisualMapInRange is a visual map instance in a range.
@@ -749,6 +791,12 @@ type VisualMapInRange struct {
 
 	// Symbol size.
 	SymbolSize float32 `json:"symbolSize,omitempty"`
+}
+
+// Dataset
+type Dataset struct {
+	// Source
+	Source interface{} `json:"source"`
 }
 
 // DataZoom is the option set for a zoom component.
@@ -1210,6 +1258,15 @@ type ZAxis3D struct {
 	// Only the values appearing in series.data can be collected. For example,
 	// if series.data is empty, nothing will be collected.
 	Data interface{} `json:"data,omitempty"`
+}
+
+// Grid
+type Grid struct {
+	// Height
+	Height float32 `json:"height,omitempty"`
+
+	// Bottom
+	Bottom float32 `json:"bottom,omitempty"`
 }
 
 // Grid3D contains options for the 3D coordinate.

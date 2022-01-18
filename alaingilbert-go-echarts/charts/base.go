@@ -18,6 +18,7 @@ type BaseConfiguration struct {
 	opts.Polar      `json:"polar"`
 	opts.AngleAxis  `json:"angleAxis"`
 	opts.RadiusAxis `json:"radiusAxis"`
+	opts.Dataset    `json:"dataset"`
 
 	render.Renderer        `json:"-"`
 	opts.Initialization    `json:"-"`
@@ -35,6 +36,7 @@ type BaseConfiguration struct {
 	opts.YAxis3D
 	opts.ZAxis3D
 	opts.Grid3D
+	opts.Grid
 
 	legends []string
 	// Colors is the color list of palette.
@@ -44,6 +46,7 @@ type BaseConfiguration struct {
 	appendColor []string // append customize color to the Colors(reverse order)
 
 	DataZoomList  []opts.DataZoom  `json:"datazoom,omitempty"`
+	GridList      []opts.Grid      `json:"grid,omitempty"`
 	VisualMapList []opts.VisualMap `json:"visualmap,omitempty"`
 
 	// ParallelAxisList represents the component list which is the coordinate axis for parallel coordinate.
@@ -68,6 +71,7 @@ func (bc *BaseConfiguration) JSON() map[string]interface{} {
 		"legend":  bc.Legend,
 		"tooltip": bc.Tooltip,
 		"series":  bc.MultiSeries,
+		"dataset": bc.Dataset,
 	}
 
 	if bc.hasPolar {
@@ -99,6 +103,10 @@ func (bc *BaseConfiguration) JSON() map[string]interface{} {
 
 	if len(bc.DataZoomList) > 0 {
 		obj["dataZoom"] = bc.DataZoomList
+	}
+
+	if len(bc.GridList) > 0 {
+		obj["grid"] = bc.GridList
 	}
 
 	if len(bc.VisualMapList) > 0 {
@@ -235,6 +243,13 @@ func WithInitializationOpts(opt opts.Initialization) GlobalOpts {
 func WithDataZoomOpts(opt ...opts.DataZoom) GlobalOpts {
 	return func(bc *BaseConfiguration) {
 		bc.DataZoomList = append(bc.DataZoomList, opt...)
+	}
+}
+
+// WithGridOpts
+func WithGridOpts(opt ...opts.Grid) GlobalOpts {
+	return func(bc *BaseConfiguration) {
+		bc.GridList = append(bc.GridList, opt...)
 	}
 }
 
