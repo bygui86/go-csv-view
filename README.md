@@ -40,16 +40,18 @@ See [examples](examples) folder
   - [alaingilbert enhancement](https://github.com/alaingilbert/go-echarts/commit/c80db93de77a03040462ede3a5c60bb0954e05ba)
   - [go-tachart](https://github.com/iamjinlei/go-tachart)
   - [(apache echarts) candlestick-brush example](https://echarts.apache.org/examples/en/editor.html?c=candlestick-brush)
+- articles
+  - [Visualizing data with go-echarts](https://blog.logrocket.com/visualizing-data-go-echarts/)
 
 ### statsview
 
 - [repo](https://github.com/go-echarts/statsview)
 
-### initial inspiration
+### inspirations
 
-- [article](https://betterprogramming.pub/data-visualization-in-go-e3135d93f8a8)
-- [repo](https://github.com/horlabyc/data-visualization)
-
-### other articles
-
-- [Visualizing data with go-echarts](https://blog.logrocket.com/visualizing-data-go-echarts/)
+- initial
+  - [article](https://betterprogramming.pub/data-visualization-in-go-e3135d93f8a8)
+  - [repo](https://github.com/horlabyc/data-visualization)
+- tree graph
+  - [article](https://golangexample.com/draw-graphs-through-go-mod-graph-output/)
+  - [repo](https://github.com/PaulXu-cn/go-mod-graph-chart)

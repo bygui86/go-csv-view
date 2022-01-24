@@ -80,6 +80,14 @@ cd line-bar && go run main.go
 open trades.html
 ```
 
+## `tree`
+
+```bash
+cd tree && go run main.go
+
+open tree.html
+```
+
 ## `kline`
 
 ```bash
@@ -111,4 +119,13 @@ cd statsview && go run main.go
 
 # in another terminal window
 open http://localhost:8090/debug/statsview
+```
+
+## `dynamic-page`
+
+```bash
+cd dynamic-page && go run main.go
+
+# in another terminal window
+open http://localhost:8080/page
 ```

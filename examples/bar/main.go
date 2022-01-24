@@ -18,6 +18,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer file.Close()
+
 	reader := csv.NewReader(file)
 	reader.LazyQuotes = true
 	records, err := reader.ReadAll()

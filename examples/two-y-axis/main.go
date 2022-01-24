@@ -178,6 +178,8 @@ func loadCsv(filePath string) ([][]string, error) {
 	if openErr != nil {
 		return nil, openErr
 	}
+	defer file.Close()
+
 	reader := csv.NewReader(file)
 	reader.LazyQuotes = true
 	records, readErr := reader.ReadAll()
